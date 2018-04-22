@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ddeead54966764fb2fb1fed1099e4f, type: 3}
+  m_Name: config
+  m_EditorClassIdentifier: 
+  menuWidth: 200
+  menuHeight: 20
+  menuFontSize: 12
+  menuIconPaddingTop: 2
+  menuIconPaddingBottom: 2
+  menuIconPaddingLeft: 2
+  menuIconPaddingRight: 2
+  menuItemPaddingTop: 1
+  menuItemPaddingBottom: 1
+  menuItemPaddingLeft: 1
+  menuItemPaddingRight: 1
+  skin: {fileID: 11400000, guid: 5a033f7b06ffa204a990695d1d09a2f8, type: 2}
