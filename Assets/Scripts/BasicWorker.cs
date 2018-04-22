@@ -26,7 +26,7 @@ public class BasicWorker : MonoBehaviour {
 
     public void Finish(MovingObject worker, WaypointNode node)
     {
-        Debug.Log("FINISH");
+        //Debug.Log("FINISH");
         if (node != target)
             return;
         if (node == parentBase.node)

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 60793030755614826}
   - component: {fileID: 114881266416338764}
   - component: {fileID: 114183399713078182}
+  - component: {fileID: 114859053076601506}
   m_Layer: 0
   m_Name: Ant
   m_TagString: Untagged
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotionSpeed: 5
   RotationSpeed: 120
-  destination: {fileID: 0}
+  _destination: {fileID: 0}
   NextWaypointReachedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -185,6 +186,20 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: WaypointFinishReachedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114859053076601506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1204597580415188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a602ee9f2b8c7184292bc4a6338874af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 100
+  opened: 0
+  visionZone: {fileID: 0}
 --- !u!114 &114881266416338764
 MonoBehaviour:
   m_ObjectHideFlags: 1

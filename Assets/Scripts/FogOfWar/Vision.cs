@@ -5,19 +5,25 @@ using UnityEngine;
 public class Vision : MonoBehaviour {
     public float radius = 10;
     public bool opened = false;
+    private bool initiate = false;
+    public CircleCollider2D visionZone;
 	// Use this for initialization
 	void Start () {
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-		if (!opened)
+        //Debug.Log(GetComponentInParent<Vision>());
+        if (transform.parent == null || transform.parent.GetComponent<Vision>() == null)
         {
-            if (FogOfWar.instance != null)
-            {
-                opened = true;
-                FogOfWar.instance.Open(transform.position, radius);
-            }
+            initiate = true;
+            visionZone = new GameObject().AddComponent<CircleCollider2D>();
+            visionZone.transform.parent = transform;
+            visionZone.transform.localPosition = Vector3.zero;
+            visionZone.gameObject.AddComponent<Vision>().radius = radius;
+            visionZone.gameObject.AddComponent<Rigidbody2D>();
+            visionZone.GetComponent<Rigidbody2D>().simulated = false;
+            visionZone.offset = new Vector2(0, 0);
+            visionZone.radius = (radius - 5)/100;
+            //Debug.Log(LayerMask.NameToLayer("FogOfWar"));
+            visionZone.gameObject.layer = LayerMask.NameToLayer("FogOfWar");
         }
 	}
+    
 }

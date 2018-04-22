@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 public class WaypointRoute
 {
@@ -19,11 +18,11 @@ public class WaypointRoute
 
     public WaypointRoute(MovingObject movingObject, List<WaypointNode> waypoints)
     {
-        Debug.Log(waypoints[0].gameObject.name);
-        Debug.Log(waypoints.Count);
+        //Debug.Log(waypoints[0].gameObject.name);
+        //Debug.Log(waypoints.Count);
         _waypoints = new Queue<WaypointNode>(waypoints);
         Destination = waypoints[waypoints.Count - 1];
-        Debug.Log(Destination.gameObject.name);
+        //Debug.Log(Destination.gameObject.name);
         _movingObject = movingObject;
     }
     public WaypointRoute(MovingObject movingObject, WaypointNode waypoint)

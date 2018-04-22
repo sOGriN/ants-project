@@ -15,7 +15,7 @@ public class MovingObject : MonoBehaviour {
 
     void onValidate()
     {
-        Debug.Log("Validate");
+        //Debug.Log("Validate");
         if (route==null||route.Destination != Destination)
         {
             WaypointNode closest = WaypointNode.GetClosest(transform.position);
